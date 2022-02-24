@@ -75,7 +75,7 @@
     const $ = param => document.querySelector(param)
     const _ = param => document.querySelectorAll(param)
     const baseURL = ""// "https://chesterwov-dpy.github.io/"
-    for (btn of _('nav button')) {
+    for (let btn of _('nav button')) {
       btn.addEventListener("click", () => {
         window.open(btn.dataset.url)
       })
