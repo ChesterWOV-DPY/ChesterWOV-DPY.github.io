@@ -1,1 +1,83 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <style>
+      :root {
+        --bg: #40a0ff
+      }
+      body {
+        font-family: Avenir;
+        background: #00ffb9;
+        color: white;
+      }
+      .center {
+        text-align: center;
+      }
+      
+      nav button {
+        color: white;
+        user-select: none;
+        font-size: large;
+        background: black;
+        width: 32%;
+        height: 40px;
+        border-radius: 1.5rem;
+      }
+      nav button:hover {
+        background: #707070;
+      }
+      .card {
+        background: var(--bg);
+        height: 25%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.25rem;
+      }
+      .channel {
+        background: #5169ff;
+        color: white;
+      }
+      p {
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <button data-url="https://github.com/ChesterWOV-DPY">GitHub</button>
+      <!--
+      <button data-url="">E</button>
+      <button data-url="">Timeline</button>
+      -->
+    </nav>
+    <br>
+    <div class="card">
+      <br>
+      <h1 class="center">
+        ChesterWOV
+      </h1>
+      <br>
+    </div>
+    <hr>
+    <div id="about" class="card">
+      <p>
+        Hello! I am ChesterWOV - maybe known as <code>403: Forbidden</code>.<br>
+        I am a discord.py programmer! If I am online in discord, I am either AFK or helping in dpy <span class="channel">#help</span>. I used <b>HTML, CSS and JS</b> to make this website!
+      </p>
+    </div>
+  </body>
+  <script>
+    const $ = param => document.querySelector(param)
+    const _ = param => document.querySelectorAll(param)
+    const baseURL = ""// "https://chesterwov-dpy.github.io/"
+    for (btn of _('nav button')) {
+      btn.addEventListener("click", () => {
+        window.open(btn.dataset.url)
+      })
+    }
+  </script>
+</html>
